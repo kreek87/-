@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茗之韻 Ming's Melody | 頂級手作茶飲</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="茗之韻 Ming's Melody提供世界最高品質黑糖珍珠鮮奶、果茶與靜岡抹茶拿鐵。每一口，都是藝術。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">茗之韻 <span>Ming's Melody</span></h1>
+            <ul class="nav-links">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#menu">主打飲品</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+                <li>
+                    <a href="#" id="cart-toggle" class="cart-icon-wrapper">
+                        <i data-lucide="shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="order-btn">立即點餐</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg">
+            <img src="images/hero_background_1775539365021.png" alt="Premium Tea Background">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content fade-up">
+            <h2 class="hero-title">每一口，都是藝術</h2>
+            <p class="hero-subtitle">嚴選世界頂級茶葉，結合百年工藝與現代美學。<br>為您奉上一杯純粹的極致品味。</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">探索菜單</a>
+                <a href="#about" class="btn btn-secondary">品牌故事</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="section-header fade-up">
+            <h2>主打飲品</h2>
+            <p>Signature Beverages</p>
+            <div class="divider"></div>
+        </div>
+        <div class="menu-grid">
+            <!-- Drink 1 -->
+            <div class="menu-card fade-up">
+                <div class="card-img-container">
+                    <img src="images/boba_milk_tea_1775539125436.png" alt="經典黑糖珍珠鮮奶">
+                    <div class="price-tag">NT$ 75</div>
+                </div>
+                <div class="card-content">
+                    <h3>經典黑糖珍珠鮮奶</h3>
+                    <p class="eng-name">Classic Brown Sugar Boba Milk</p>
+                    <p class="desc">慢火細熬手工黑糖，搭配Q彈每日現煮珍珠與在地小農鮮奶，醇厚香濃的極致享受。</p>
+                    <button class="add-to-cart" data-id="drink1" data-name="經典黑糖珍珠鮮奶" data-price="75"
+                        data-img="images/boba_milk_tea_1775539125436.png"><i data-lucide="shopping-cart"></i>
+                        加入購物車</button>
+                </div>
+            </div>
+            <!-- Drink 2 -->
+            <div class="menu-card fade-up" style="transition-delay: 100ms;">
+                <div class="card-img-container">
+                    <img src="images/grapefruit_tea_1775539149215.png" alt="滿杯紅柚翡翠">
+                    <div class="price-tag">NT$ 85</div>
+                </div>
+                <div class="card-content">
+                    <h3>滿杯紅柚翡翠</h3>
+                    <p class="eng-name">Ruby Grapefruit Green Tea</p>
+                    <p class="desc">嚴選南非紅寶石葡萄柚，佐以輕焙翡翠綠茶，清爽回甘，每一口都吃得到果肉。</p>
+                    <button class="add-to-cart" data-id="drink2" data-name="滿杯紅柚翡翠" data-price="85"
+                        data-img="images/grapefruit_tea_1775539149215.png"><i data-lucide="shopping-cart"></i>
+                        加入購物車</button>
+                </div>
+            </div>
+            <!-- Drink 3 -->
+            <div class="menu-card fade-up" style="transition-delay: 200ms;">
+                <div class="card-img-container">
+                    <img src="images/matcha_latte_1775539217667.png" alt="靜岡極致抹茶拿鐵">
+                    <div class="price-tag">NT$ 95</div>
+                </div>
+                <div class="card-content">
+                    <h3>靜岡極致抹茶拿鐵</h3>
+                    <p class="eng-name">Shizuoka Premium Matcha Latte</p>
+                    <p class="desc">採用日本靜岡直輸嚴選抹茶粉，完美的漸層視覺與微苦回甘的成熟風味，🍵 抹茶控必點。</p>
+                    <button class="add-to-cart" data-id="drink3" data-name="靜岡極致抹茶拿鐵" data-price="95"
+                        data-img="images/matcha_latte_1775539217667.png"><i data-lucide="shopping-cart"></i>
+                        加入購物車</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2><i data-lucide="shopping-bag"></i> 購物車</h2>
+            <button id="close-cart" class="close-btn"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items dynamically inserted here -->
+            <div class="empty-cart-msg">您的購物車是空的</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>總計</span>
+                <span id="cart-total-price">NT$ 0</span>
+            </div>
+            <button class="checkout-btn">前往結帳</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">茗之韻 <span>Ming's Melody</span></div>
+            <p>融合傳統與現代的茶飲體驗</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 茗之韻 Ming's Melody. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
